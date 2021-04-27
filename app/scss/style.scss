@@ -1,0 +1,829 @@
+@import 'mixins';
+@import "fonts";
+@import 'reset';
+@import "global";
+@import "header";
+
+
+
+//--------------------------- info start ------------------------------//
+.info {
+	@include adaptive(padding-top, 105, 30, 3);
+	// @include adaptive(margin-bottom, 120, 30, 3);
+	margin-bottom: 120px;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		width: 100%;
+
+		&--left {
+			max-width: 570px;
+			margin-right: 30px;
+		}
+
+		&--right {
+			max-width: 470px;
+			transform: translateY(-150px);
+		}
+	}
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		@include adaptive(margin-bottom, 40, 20, 3);
+	}
+
+	&__video-wrap {
+		max-width: 570px;
+		width: 100%;
+		max-height: 350px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__video {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+	}
+
+	&__video-btn {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, .5);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all .3s;
+
+		&._active	{
+			opacity: 0;
+		}
+
+		&:hover {
+			background-color: #fff;
+		}
+	}
+
+	&__video-play {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: #fff;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 17px;
+			left: 20px;
+			border-style: solid;
+			border-width: 8.5px 0 8.5px 14px;
+			border-color: transparent transparent transparent rgb(116, 146, 236);
+		}
+	}
+
+	&__item {
+		width: 100%;
+		display: flex;
+		@include adaptive(margin-bottom, 40, 20, 3);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__icon {
+		display: inline-block;
+		@include adaptive(margin-right, 25, 15, 3);
+		@include adaptive(width, 70, 30, 3);
+		@include adaptive(height, 70, 30, 3);
+		object-fit: cover;
+	}
+
+	&__item-box {
+		max-width: 375px;
+	}
+
+	&__item-title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+		@include adaptive(font-size, 18, 15, 3);
+		color: #000;
+		@include adaptive(margin-bottom, 15, 0, 3);
+	}
+
+	&__item-text {
+		max-height: 55px;
+		overflow: auto;
+	}
+}
+
+//--------------------------- info media -----------------------------//
+@media (max-width: 1200px) {
+	.info {
+		margin-bottom: 80px;
+
+		&__column {
+			
+			&--right {
+				transform: translateY(-110px);
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.info {
+		margin-bottom: 0px;
+
+		&__column {
+			
+			&--right {
+				transform: translateY(-70px);
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.info {
+		margin-bottom: 50px;
+
+		&__row {
+			display: block;
+		}
+
+		&__column {
+			&--left {
+				margin-bottom: 30px;
+				max-width: 100%;
+			}
+			
+			&--right {
+				transform: translateY(0px);
+				max-width: 100%;
+			}
+		}
+
+		&__item-box {
+			max-width: 100%;
+		}
+
+		&__item-text {
+			max-height: 100%;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.info {
+		margin-bottom: 30px;
+
+		&__title {
+			margin-bottom: 10px;
+		}
+	}	
+}
+//---------------------------- info end ------------------------------//
+
+
+//------------------------ home-classes/classes start ---------------------------//
+	.home-classes {
+		background-image: url('../img/home-classes-bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left bottom;
+	}
+
+	.classes {
+		padding: 0 50px;
+
+		&__inner {
+			@include adaptive(padding-bottom, 100, 32, 3);
+		}
+
+		&__decor {
+			display: block;
+			margin: 0 auto 20px;
+		}
+
+		&__title {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 300;
+			@include adaptive(font-size, 48, 32, 3);
+			color: $title;
+			text-align: center;
+			@include adaptive(margin-bottom, 70, 25, 3);
+		}
+
+		&__items {
+			display: flex;
+			flex-direction: column;
+			// max-width: 270px;
+			width: 100%;
+			color: $text;
+		}
+
+		&__image {
+			padding-bottom: 74%;
+			width: 100%;
+			background-color: #bbb;
+			border-radius: 5px;
+			overflow: hidden;
+			@include adaptive(margin-bottom, 30, 15, 3);
+			position: relative;
+		}
+
+		&__img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&__items-box {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		&__items-title {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 500;
+			@include adaptive(font-size, 18, 16, 3);
+			color: $title;
+			@include adaptive(margin-bottom, 15, 5, 3);
+			min-height: 45px;
+		}
+
+		&__list {
+			@include adaptive(margin-bottom, 20, 5, 3);
+		}
+
+		&__icon {
+			margin-right: 10px;
+			color: $title;
+		}
+
+		&__text {
+			max-height: 72px;
+			overflow: auto;
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none;
+	}
+
+	.slider {
+		position: relative;
+
+		&__button-prev,
+		&__button-next {
+			font-size: 30px;
+			position: absolute;
+			z-index: 100;
+			top: 50%;
+			transform: translateY(-50%);
+			cursor: pointer;
+
+			&:hover {
+				color: $title;
+			}
+		}
+
+		&__button-next {
+			right: -60px;
+		}
+
+		&__button-prev {
+			left: -60px;
+		}
+	}
+//------------------------ home-classes/classes media --------------------------//
+@media (max-width: 1200px) {
+	.classes {
+		
+	}
+}
+
+@media (max-width: 768px) {
+	.classes {
+	
+	}
+}
+
+@media (max-width: 576px) {
+	.classes {
+		padding: 0;
+
+		&__decor {
+			max-width: 30%;
+			margin-bottom: 0;
+		}
+
+		&__items {
+			margin: 0 auto;
+		}
+	}
+
+	.slider {
+		&__button-prev,
+		&__button-next {
+			display: none;
+		}
+	}
+}
+//------------------------- home-classes/classes end ----------------------------//
+
+
+//--------------------------- offer start ------------------------------//
+.offer {
+	@include adaptive(padding-top, 120, 30, 3);
+	@include adaptive(padding-bottom, 120, 30, 3);
+
+	&__inner {
+		text-align: center;
+	}
+
+	&__title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 300;
+		color: #000;
+		@include adaptive(font-size, 32, 27, 3);
+		line-height: 36px;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		max-width: 450px;
+		margin: 0 auto 40px;
+	}
+
+	&__btn {
+		display: inline-block;
+		@include adaptive(max-width, 297, 230, 3);
+		width: 100%;
+		padding: 8px 15px;
+		font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+		color: #fff;
+		background-color: $title;
+		border-radius: 25px;
+		@include adaptive(margin-bottom, 80, 40, 3);
+
+		&:hover {
+			box-shadow: 0px 0px 1px 1px $title;
+			text-shadow: 0 0 1px #fff;
+		}
+	}
+
+	&__box {
+		display: grid;
+		grid-gap: 30px;
+		grid-template-columns: repeat(3, minmax(auto, 370px));
+		// grid-template-rows: repeat(2, minmax(auto, 270px));
+		// grid-template-rows: 270px 270px;
+		// grid-auto-flow: dense;
+	}
+
+	&__box-item {
+		position: relative;
+		height: 270px;
+
+		&--big {
+			grid-column: span 2;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+//--------------------------- offer media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+	.offer {
+		&__box {
+			grid-template-columns: repeat(2, minmax(auto, 1fr));
+			grid-gap: 15px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.offer {
+		&__box-item {
+			height: 200px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.offer {
+		&__box {
+			grid-template-columns: 1fr;
+		}
+
+		&__box-item {
+	
+			&--big {
+				grid-column: span 1;
+			}
+		}
+
+		&__text {
+			margin: 0 auto 20px;
+		}
+	}
+}
+//---------------------------- offer end -------------------------------//
+
+
+//------------------------ instructors start ---------------------------//
+.instructors {
+	&__top {
+		background-image: url('../img/instructors-bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__top-inner {
+		@include adaptive(padding-top, 140, 30, 3);
+		@include adaptive(padding-bottom, 105, 30, 3);
+		text-align: center;
+		color: #fff;
+	}
+
+	&__title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 300;
+		@include adaptive(font-size, 32, 25, 3);
+		@include adaptive(line-height, 36, 26, 3);
+		@include adaptive(margin-bottom, 20, 15, 3);
+	}
+
+	&__text {
+		margin: 0 auto;
+		max-width: 550px;
+		@include adaptive(margin-bottom, 50, 20, 3);
+	}
+
+	&__meet {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+		margin-bottom: 15px;
+	}
+
+	&__btn {
+		width: 40px;
+		height: 40px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		transition: all .3s;
+
+		&:hover {
+			border-color: #ccc;
+
+			.instructors__btn-icon {
+				color: #ccc;
+			}
+		}
+	}
+
+	&__btn-icon {
+		color: #fff;
+		transition: all .3s;
+	}
+
+	&__bottom {
+		@include adaptive(padding-top, 120, 30, 3);
+		@include adaptive(padding-bottom, 60, 10, 3);
+	}
+
+	&__box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__items {
+		flex: 0 1 270px;
+		display: flex;
+		align-items: center;
+		@include adaptive(margin-bottom, 60, 20, 3);
+
+		&:hover {
+			.instructors__image {
+				&::after,
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__image {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		overflow: hidden;
+		position: relative;
+		margin-right: 20px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.4);
+			left: 0;
+			top: 0;
+			z-index: 5;
+			opacity: 0;
+			transition: all .3s;
+		}
+
+		&::before {
+			content: "\f054";
+			font-family: 'icomoon';
+			font-size: 16px;
+			color: #fff;
+			position: absolute;
+			z-index: 6;
+			opacity: 0;
+			transition: all .3s;
+			top: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__avatar {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__name {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
+		color: #000;
+	}
+
+	&__descr {
+		@include adaptive(font-size, 14, 12, 3);
+		line-height: 24px;
+		color: $text;
+	}
+}
+//------------------------ instructors media --------------------------//
+@media (max-width: 1200px) {
+	.instructors {
+
+	}	
+}
+
+@media (max-width: 992px) {
+	.instructors {
+
+	}
+}
+
+@media (max-width: 768px) {
+	.instructors {
+
+	}
+}
+
+@media (max-width: 576px) {
+	.instructors {
+		
+	}	
+}
+//------------------------- instructors end ----------------------------//
+
+
+//--------------------------- challenge start ------------------------------//
+.challenge {
+	@include adaptive(padding-top, 240, 50, 3);
+	@include adaptive(padding-bottom, 80, 30, 3);
+	background-image: url('../img/challenge-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right center;
+
+	&__box {
+		@include adaptive(margin-left, 180, 0, 3);
+		@include adaptive(margin-bottom, 220, 50, 3);
+	}
+
+	&__title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 300;
+		@include adaptive(font-size, 48, 36, 3);
+		@include adaptive(line-height, 56, 38, 3);
+		color: #7492ec;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		@include adaptive(font-size, 21, 16, 3);
+		@include adaptive(line-height, 36, 24, 3);
+		color: #8ea2dc;
+		max-width: 440px;
+		@include adaptive(margin-bottom, 40, 20, 3);
+	}
+
+	&__btn {
+		display: inline-block;
+		@include adaptive(max-width, 210, 180, 3);
+		text-align: center;
+    width: 100%;
+    padding: 8px 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background-color: #7492ec;
+    border-radius: 25px;
+
+		&:hover {
+			box-shadow: 0px 0px 1px 1px #7492ec;
+    	text-shadow: 0 0 1px #fff;
+		}
+	}
+
+	&__logos {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logos-item {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+//--------------------------- challenge media -----------------------------//
+@media (max-width: 1200px) {
+	.challenge {
+
+	}
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	.challenge {
+		background-position: -850px ;
+
+		&__logos {
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+		}
+
+		&__logos-item {
+			width: 50%;
+			text-align: center;
+			margin-right: 0;
+			margin-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+//---------------------------- challenge end -------------------------------//
+
+
+//--------------------------- start ------------------------------//
+
+//--------------------------- media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- end -------------------------------//
+
+
+//--------------------------- start ------------------------------//
+
+//--------------------------- media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- end -------------------------------//
+
+
+//--------------------------- start ------------------------------//
+
+//--------------------------- media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- end -------------------------------//
+
+
+//--------------------------- start ------------------------------//
+
+//--------------------------- media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- end -------------------------------//
+
+
+@import "footer";

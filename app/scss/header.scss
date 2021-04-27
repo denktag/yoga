@@ -1,0 +1,237 @@
+.header {
+	background-image: url('../img/header-page-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&--home {
+		background-image: url('../img/home-header-bg.jpg');
+	}
+
+
+	&__container {
+		@include container(1830px);
+	}
+
+	&__top {
+		width: 100%;
+		padding: 32px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptive(margin-bottom, 185, 0, 3);
+	}
+
+	&__logo {
+		margin-right: auto;
+	}
+
+	&__burger {
+		display: none;
+	}
+
+	&__menu {
+		margin-right: 30px;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		margin-right: 27px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+		color: $title;
+		@include adaptive(font-size, 16, 15, 3);
+
+		&:hover {
+			text-shadow: 0px 0px 1px $title;
+		}
+	}
+
+	&__btn {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+		@include adaptive(font-size, 16, 12, 3);
+		display: inline-block;
+		padding: 9px 19px;
+		background-color: $title;
+		color: #fff;
+		border-radius: 25px;
+
+		&:hover {
+			text-shadow: 0px 0px 3px #fff;
+			box-shadow: 1px 1px 2px $title;
+		}
+	}
+
+	&__bottom {
+		font-family: 'Poppins', sans-serif;
+		@include adaptive(margin-bottom, 120, 40, 3);
+
+		&--home {
+			text-align: right;
+			line-height: 100px;
+			@include adaptive(margin-bottom, 420, 40, 3);
+		}	
+	}
+
+	&__title {
+		@include adaptive(font-size, 72, 32, 3);
+		@include adaptive(line-height, 90, 40, 3);
+		font-weight: 300;
+		color: $title;
+
+		&--one {
+			@include adaptive(margin-right, 60, 30, 3);
+		}
+	}
+
+	&__text {
+		@include adaptive(font-size, 14, 12, 3);
+		@include adaptive(line-height, 24, 20, 3);
+	}
+}
+
+
+
+//--------------------------- media -----------------------------//
+@media (max-width: 768px) {
+	.header {
+		background-position: 0 0;
+
+		&__inner {
+			position: relative;
+		}
+
+		&__top{
+			padding: 20px 0 0;
+		}
+
+		&__logo {
+			margin-right: 10px;
+		}
+	
+		&__burger {
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 20px;
+			margin-left: 15px;
+			cursor: pointer;
+			order: 3;
+	
+			&::before,
+			&::after {
+				content: '';
+				background-color: $title;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				transition: all .3s;
+			}
+	
+			&::before {
+				top: 0;
+			}
+	
+			&::after {
+				bottom: 0;
+			}
+		}
+	
+		& ._active .header__burger-line {
+			transform: scale(0);
+		}
+	
+		& ._active::before {
+			transform: rotate(45deg);
+			top: 9px;
+		}
+	
+		& ._active::after {
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+	
+		&__burger-line {
+			position: absolute;
+			background-color: $title;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			height: 2px;
+			transition: all .3s;
+		}
+	
+		&__menu {
+			max-width: 100%;
+			width: 100%;
+			padding: 30px 0;
+			position: absolute;
+			z-index: 5;
+			top: 100px;
+			left: 0;
+			transform: translateX(120%);
+			opacity: 0;
+			background-color: #e2e6ef;
+			box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+			transition: all .5s;
+	
+			&._active {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+	
+		&__list {
+			margin: 0;
+			display: block;
+			text-align: center;
+		}
+	
+		&__item {
+			margin-right: 0;
+			margin-bottom: 20px;
+	
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	
+		&__link {
+			display: block;
+			max-width: 100%;
+			padding: 10px 0;
+			font-size: 20px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.header {
+		&__top {
+			padding: 10px 0 0;
+		}
+
+		&__btn {
+			padding: 4px 18px;
+		}
+	}
+
+	.logo {
+		&__img {
+			width: 70%;
+		}
+	}
+}
