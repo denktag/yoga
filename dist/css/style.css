@@ -263,8 +263,14 @@ body {
 
 .header__text {
   font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
-  line-height: calc(30px + 60 * ((100vw - 320px) / 1600));
   color: #99aade;
+  margin-top: 30px;
+}
+
+.header__text--pricing {
+  max-width: 381px;
+  margin-top: 10px;
+  line-height: calc(20px + 4 * ((100vw - 320px) / 1600));
 }
 
 .info {
@@ -785,10 +791,18 @@ body {
 .challenge {
   padding-top: calc(50px + 190 * ((100vw - 320px) / 1600));
   padding-bottom: calc(30px + 50 * ((100vw - 320px) / 1600));
-  background-image: url("../img/challenge-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
+}
+
+.challenge--home {
+  background-image: url("../img/challenge-bg.jpg");
+}
+
+.challenge--pricing {
+  background-image: url("../img/pricing-challenge-bg.jpg");
+  background-position: center center;
 }
 
 .challenge__box {
@@ -1071,6 +1085,90 @@ body {
 
 .reviews__slider-container > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 8px;
+}
+
+.pricing {
+  padding-top: calc(40px + 110 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(30px + 120 * ((100vw - 320px) / 1600));
+}
+
+.pricing__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.pricing__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 25%;
+  flex: 0 1 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.pricing__item:last-child {
+  margin-right: 0;
+}
+
+.pricing__price {
+  margin-bottom: calc(3px + 27 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(3px + 27 * ((100vw - 320px) / 1600));
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  color: #999;
+}
+
+.pricing__num {
+  color: #7492ec;
+  font-size: calc(26px + 10 * ((100vw - 320px) / 1600));
+  font-weight: 700;
+}
+
+.pricing__title {
+  color: #7492ec;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: calc(5px + 15 * ((100vw - 320px) / 1600));
+}
+
+.pricing__text {
+  margin-bottom: calc(8px + 30 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(8px + 30 * ((100vw - 320px) / 1600));
+  border-bottom: 1px solid #eee;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.pricing__btn {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  outline: transparent;
+  background-color: #7492ec;
+  max-width: 140px;
+  border-radius: 20px;
+  padding: 13px 20px;
+  border: none;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.pricing__btn:hover {
+  -webkit-box-shadow: 0px 0px 1px 1px #7492ec;
+  box-shadow: 0px 0px 1px 1px #7492ec;
+  text-shadow: 0 0 2px #fff;
 }
 
 .footer {
@@ -1468,6 +1566,27 @@ body {
     grid-gap: 15px;
   }
 
+  .pricing {
+    margin: 0 -10px;
+    padding-bottom: 20px;
+  }
+
+  .pricing__inner {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .pricing__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 45%;
+    flex: 0 1 45%;
+    margin: 0 10px 50px;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
   .footer__inner--info {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1684,6 +1803,10 @@ body {
     height: 200px;
   }
 
+  .challenge--pricing {
+    background-position-x: -320px;
+  }
+
   .footer__inner--menu {
     position: relative;
   }
@@ -1884,8 +2007,12 @@ body {
     margin: 0 auto 20px;
   }
 
-  .challenge {
+  .challenge--home {
     background-position: -850px;
+  }
+
+  .challenge--pricing {
+    background-position-x: -525px;
   }
 
   .challenge__logos {
@@ -1935,6 +2062,20 @@ body {
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 30px;
+  }
+
+  .pricing {
+    padding-bottom: 0px;
+  }
+
+  .pricing__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+
+  .pricing__btn {
+    padding: 10px 20px;
   }
 
   .footer__logo {
@@ -2013,7 +2154,9 @@ body {
 
 .webp .instructors__top{ background-image: url(../img/instructors-bg.webp); }
 
-.webp .challenge{ background-image: url(../img/challenge-bg.webp); }
+.webp .challenge--home{ background-image: url(../img/challenge-bg.webp); }
+
+.webp .challenge--pricing{ background-image: url(../img/pricing-challenge-bg.webp); }
 
 .webp .wisdom{ background-image: url(../img/wisdom-bg.webp); }
 

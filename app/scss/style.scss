@@ -635,10 +635,18 @@
 .challenge {
 	@include adaptive(padding-top, 240, 50, 3);
 	@include adaptive(padding-bottom, 80, 30, 3);
-	background-image: url('../img/challenge-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right center;
+
+	&--home {
+		background-image: url('../img/challenge-bg.jpg');
+	}
+
+	&--pricing {
+		background-image: url('../img/pricing-challenge-bg.jpg');
+		background-position:center center;
+	}
 
 	&__box {
 		@include adaptive(margin-left, 180, 0, 3);
@@ -706,12 +714,22 @@
 }
 
 @media (max-width: 768px) {
-
+	.challenge {
+		&--pricing {
+			background-position-x: -320px;
+		}
+	}
 }
 
 @media (max-width: 576px) {
 	.challenge {
-		background-position: -850px ;
+		&--home {
+			background-position: -850px ;
+		}
+
+		&--pricing {
+			background-position-x: -525px;
+		}
 
 		&__logos {
 			flex-wrap: wrap;
@@ -1036,9 +1054,124 @@
 //---------------------------- reviews end -------------------------------//
 
 
-//--------------------------- start ------------------------------//
+//--------------------------- pricing start ------------------------------//
+.pricing {
+	@include adaptive(padding-top, 150, 40, 3);
+	@include adaptive(padding-bottom, 150, 30, 3);
 
-//--------------------------- media -----------------------------//
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		flex: 0 1 25%;
+		display: flex;
+		flex-direction: column;
+		margin-right: 20px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__price {
+		@include adaptive(margin-bottom, 30, 3, 3);
+		@include adaptive(padding-bottom, 30, 3, 3);
+		border-bottom: 1px solid #eee;
+		width: 100%;
+		color: #999;
+	}
+
+	&__num {
+		color: $title;
+		@include adaptive(font-size, 36, 26, 3);
+		font-weight: 700;
+	}
+
+	&__title {
+		color: $title;
+		font-family: 'Poppins', sans-serif;
+		text-transform: uppercase;
+		@include adaptive(margin-bottom, 20, 5, 3);
+	}
+
+	&__text {
+		@include adaptive(margin-bottom, 38, 8, 3);
+		@include adaptive(padding-bottom, 38, 8, 3);
+		border-bottom: 1px solid #eee;
+		flex: 1 0 auto;
+		width: 100%;
+	}
+
+	&__btn {
+		color: #fff;
+		font-family: 'Poppins', sans-serif;
+		text-transform: uppercase;
+		outline: transparent;
+		background-color: $title;
+		max-width: 140px;
+		border-radius: 20px;
+		padding: 13px 20px;
+		border: none;
+		transition: all .3s;
+
+		&:hover {
+			box-shadow: 0px 0px 1px 1px $title;
+			text-shadow: 0 0 2px #fff;
+		}
+	}
+}
+//--------------------------- pricing media -----------------------------//
+@media (max-width: 1200px) {
+	.pricing {
+		
+	}
+}
+
+@media (max-width: 992px) {
+	.pricing {
+		margin: 0 -10px;
+		padding-bottom: 20px;
+
+		&__inner {
+			flex-wrap: wrap;
+		}
+
+		&__item {
+			flex: 0 1 45%;
+			margin: 0 10px 50px;
+			text-align: center;
+			align-items: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.pricing {
+
+	}
+}
+
+@media (max-width: 576px) {
+	.pricing {
+		padding-bottom: 0px;
+
+		&__item {
+			flex: 0 1 100%;
+		}
+
+		&__btn {
+			padding: 10px 20px;
+		}
+	}
+}
+//---------------------------- pricing end -------------------------------//
+
+
+//----------------------- pricing-challenge start --------------------------//
+
+//----------------------- pricing-challenge media -------------------------//
 @media (max-width: 1200px) {
 	
 }
@@ -1054,28 +1187,7 @@
 @media (max-width: 576px) {
 	
 }
-//---------------------------- end -------------------------------//
-
-
-//--------------------------- start ------------------------------//
-
-//--------------------------- media -----------------------------//
-@media (max-width: 1200px) {
-	
-}
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 576px) {
-	
-}
-//---------------------------- end -------------------------------//
+//------------------------ pricing-challenge end ---------------------------//
 
 
 //--------------------------- start ------------------------------//

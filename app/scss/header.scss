@@ -90,6 +90,7 @@
 		font-weight: 300;
 		color: $title;
 
+
 		&--one {
 			@include adaptive(margin-right, 60, 30, 3);
 		}
@@ -97,8 +98,14 @@
 
 	&__text {
 		@include adaptive(font-size, 14, 12, 3);
-		@include adaptive(line-height, 90, 30, 3);
 		color: #99aade;
+		margin-top: 30px;
+
+		&--pricing {
+			max-width: 381px;
+			margin-top: 10px;
+			@include adaptive(line-height, 24, 20, 3);
+		}
 	}
 }
 
