@@ -263,7 +263,8 @@ body {
 
 .header__text {
   font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
-  line-height: calc(20px + 4 * ((100vw - 320px) / 1600));
+  line-height: calc(30px + 60 * ((100vw - 320px) / 1600));
+  color: #99aade;
 }
 
 .info {
@@ -798,6 +799,7 @@ body {
   line-height: calc(38px + 18 * ((100vw - 320px) / 1600));
   color: #7492ec;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .challenge__text {
@@ -819,6 +821,7 @@ body {
   color: #fff;
   background-color: #7492ec;
   border-radius: 25px;
+  text-transform: uppercase;
 }
 
 .challenge__btn:hover {
@@ -845,6 +848,220 @@ body {
 
 .challenge__logos-item:last-child {
   margin-right: 0;
+}
+
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.about__text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+  max-width: 503px;
+}
+
+.about__descr {
+  margin-bottom: 20px;
+}
+
+.about__descr:last-child {
+  margin-bottom: 0;
+}
+
+.about__image {
+  max-width: 525px;
+  width: 100%;
+  height: 100%;
+}
+
+.about__img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.wisdom {
+  background-image: url("../img/wisdom-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: calc(50px + 110 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(30px + 70 * ((100vw - 320px) / 1600));
+}
+
+.wisdom__inner {
+  color: #fff;
+  text-align: center;
+}
+
+.wisdom__text {
+  font-size: calc(16px + 8 * ((100vw - 320px) / 1600));
+  line-height: calc(26px + 10 * ((100vw - 320px) / 1600));
+  font-style: italic;
+  margin-bottom: calc(20px + 10 * ((100vw - 320px) / 1600));
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wisdom__author {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.about-classes {
+  padding-top: calc(40px + 75 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(20px + 90 * ((100vw - 320px) / 1600));
+  position: relative;
+}
+
+.about-classes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  background-image: url("../img/about-classes-bg.png");
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position: top center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about-classes__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.about-classes__item {
+  max-width: 370px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.about-classes__item:last-child {
+  margin-right: 0;
+}
+
+.about-classes__image {
+  width: 100%;
+  position: relative;
+  padding-bottom: 73%;
+  background-color: #bbb;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: calc(15px + 15 * ((100vw - 320px) / 1600));
+}
+
+.about-classes__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.about-classes__title {
+  color: #7492ec;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: calc(5px + 5 * ((100vw - 320px) / 1600));
+}
+
+.reviews {
+  padding-top: calc(30px + 90 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(30px + 90 * ((100vw - 320px) / 1600));
+  background-color: #e5eaf7;
+}
+
+.reviews__slider-container {
+  margin-bottom: 80px;
+}
+
+.reviews__slider-wrapper {
+  margin-bottom: 40px;
+}
+
+.reviews__slider-slide {
+  text-align: center;
+}
+
+.reviews__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #7492ec;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.reviews__text {
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  color: #99aade;
+  height: 75px;
+  overflow: auto;
+  max-width: 580px;
+  margin: 0 auto 15px;
+}
+
+.reviews__image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  background-color: #fff;
+}
+
+.reviews__avatar {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.reviews__author {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #7492ec;
+}
+
+.statistic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.statistic__item {
+  text-align: center;
+}
+
+.statistic__num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #7492ec;
+  font-size: calc(32px + 10 * ((100vw - 320px) / 1600));
+  margin-bottom: 15px;
+}
+
+.statistic__text {
+  color: #99aade;
 }
 
 .footer {
@@ -1680,6 +1897,37 @@ body {
     margin-bottom: 0;
   }
 
+  .about__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .about__text {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .about__image {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-bottom: 15px;
+  }
+
+  .about-classes__inner {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .about-classes__item {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
   .footer__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1757,3 +2005,7 @@ body {
 .webp .instructors__top{ background-image: url(../img/instructors-bg.webp); }
 
 .webp .challenge{ background-image: url(../img/challenge-bg.webp); }
+
+.webp .wisdom{ background-image: url(../img/wisdom-bg.webp); }
+
+.webp .about-classes::before{ background-image: url(../img/about-classes-bg.webp); }

@@ -614,27 +614,15 @@
 }
 //------------------------ instructors media --------------------------//
 @media (max-width: 1200px) {
-	.instructors {
-
-	}	
 }
 
 @media (max-width: 992px) {
-	.instructors {
-
-	}
 }
 
 @media (max-width: 768px) {
-	.instructors {
-
-	}
 }
 
 @media (max-width: 576px) {
-	.instructors {
-		
-	}	
 }
 //------------------------- instructors end ----------------------------//
 
@@ -660,6 +648,7 @@
 		@include adaptive(line-height, 56, 38, 3);
 		color: #7492ec;
 		margin-bottom: 15px;
+		text-transform: uppercase;
 	}
 
 	&__text {
@@ -681,6 +670,7 @@
     color: #fff;
     background-color: #7492ec;
     border-radius: 25px;
+		text-transform: uppercase;
 
 		&:hover {
 			box-shadow: 0px 0px 1px 1px #7492ec;
@@ -704,9 +694,7 @@
 }
 //--------------------------- challenge media -----------------------------//
 @media (max-width: 1200px) {
-	.challenge {
-
-	}
+	
 }
 
 @media (max-width: 992px) {
@@ -740,6 +728,387 @@
 	}
 }
 //---------------------------- challenge end -------------------------------//
+
+
+//--------------------------- about start ------------------------------//
+.about {
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 30px 0;
+	}
+
+	&__text {
+		flex: 1 0 50%;
+		max-width: 503px;
+	}
+
+	&__descr {
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__image {
+		max-width: 525px;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__img {
+		max-width: 100%;
+		vertical-align: top;
+	}
+}
+//--------------------------- about media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	.about {
+		&__inner {
+			flex-direction: column;
+		}
+
+		&__text {
+			order: 2;
+		}
+
+		&__image {
+			order: 1;
+			margin-bottom: 15px;
+		}
+	}
+}
+//---------------------------- about end -------------------------------//
+
+
+//--------------------------- wisdom start ------------------------------//
+.wisdom {
+	background-image: url('../img/wisdom-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	@include adaptive(padding-top, 160, 50, 3);
+	@include adaptive(padding-bottom, 100, 30, 3);
+
+	&__inner {
+		color: #fff;
+		text-align: center;
+	}
+
+	&__text {
+		@include adaptive(font-size, 24, 16, 3);
+		@include adaptive(line-height, 36, 26, 3);
+		font-style: italic;
+		@include adaptive(margin-bottom, 30, 20, 3);
+		max-width: 630px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__author {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+	}
+}
+//--------------------------- wisdom media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- wisdom end -------------------------------//
+
+
+//----------------------- about-classes start --------------------------//
+.about-classes {
+	@include adaptive(padding-top, 115, 40, 3);
+	@include adaptive(padding-bottom, 110, 20, 3);
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		background-image: url('../img/about-classes-bg.png');
+		background-repeat: no-repeat;
+		background-size: inherit;
+		background-position: top center;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		max-width: 370px;
+		width: 100%;
+		margin-right: 20px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		position: relative;
+		padding-bottom: 73%;
+		background-color: #bbb;
+		border-radius: 5px;
+		overflow: hidden;
+		@include adaptive(margin-bottom, 30, 15, 3);
+	}
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__title {
+		color: $title;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+		font-size: 18px;
+		@include adaptive(margin-bottom, 10, 5, 3);
+	}
+}
+//----------------------- about-classes media -------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	.about-classes {
+		&__inner {
+			flex-wrap: wrap;
+		}
+
+		&__item {
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+}
+//------------------------ about-classes end ---------------------------//
+
+
+//--------------------------- reviews start ------------------------------//
+.reviews {
+	@include adaptive(padding-top, 120, 30, 3);
+	@include adaptive(padding-bottom, 120, 30, 3);
+	background-color: #e5eaf7;
+
+	&__slider-container {
+		margin-bottom: 80px;
+	}
+
+	&__slider-wrapper {
+		margin-bottom: 40px;
+	}
+
+	&__slider-slide {
+		text-align: center;
+	}
+
+	&__title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
+		color: $title;
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+
+	&__text {
+		@include adaptive(font-size, 16, 14, 3);
+		color: #99aade;
+		height: 75px;
+		overflow: auto;
+		max-width: 580px;
+		margin: 0 auto 15px;
+	}
+
+	&__image {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin: 0 auto 15px;
+		background-color: #fff;
+	}
+
+	&__avatar {
+		max-width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__author {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
+		color: $title;
+	}
+}
+
+.statistic {
+	display: flex;
+	justify-content: space-between;
+
+	&__item {
+		text-align: center;
+	}
+
+	&__num {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+		color: $title;
+		@include adaptive(font-size, 42, 32, 3);
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		color: #99aade;
+	}
+}
+//--------------------------- reviews media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- reviews end -------------------------------//
+
+
+//--------------------------- start ------------------------------//
+
+//--------------------------- media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- end -------------------------------//
+
+
+//--------------------------- start ------------------------------//
+
+//--------------------------- media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- end -------------------------------//
+
+
+//--------------------------- start ------------------------------//
+
+//--------------------------- media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- end -------------------------------//
+
+
+//--------------------------- start ------------------------------//
+
+//--------------------------- media -----------------------------//
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+	
+}
+//---------------------------- end -------------------------------//
 
 
 //--------------------------- start ------------------------------//

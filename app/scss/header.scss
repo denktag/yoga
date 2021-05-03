@@ -97,7 +97,8 @@
 
 	&__text {
 		@include adaptive(font-size, 14, 12, 3);
-		@include adaptive(line-height, 24, 20, 3);
+		@include adaptive(line-height, 90, 30, 3);
+		color: #99aade;
 	}
 }
 

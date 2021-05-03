@@ -36,6 +36,20 @@ let swiper = new Swiper('.classes-slider__container', {
 	},
 });
 
+let reviewsSwiper = new Swiper('.reviews__slider-container', {
+	loop: true,
+
+	pagination: {
+    el: '.reviews__slider-pagination',
+		clickable: true,
+	},
+
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true,
+	},
+});
+
 
 
 //! Запуск/остановка видео по нажатию на родителя тега 'video'
