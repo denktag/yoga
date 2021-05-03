@@ -582,6 +582,10 @@ body {
   text-shadow: 0 0 1px #fff;
 }
 
+.offer__btn--about {
+  margin-bottom: 0;
+}
+
 .offer__box {
   display: -ms-grid;
   display: grid;
@@ -989,11 +993,11 @@ body {
 }
 
 .reviews__slider-container {
-  margin-bottom: 80px;
+  margin-bottom: calc(15px + 65 * ((100vw - 320px) / 1600));
 }
 
 .reviews__slider-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 1600));
 }
 
 .reviews__slider-slide {
@@ -1056,12 +1060,17 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   color: #7492ec;
-  font-size: calc(32px + 10 * ((100vw - 320px) / 1600));
-  margin-bottom: 15px;
+  font-size: calc(27px + 15 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(10px + 5 * ((100vw - 320px) / 1600));
 }
 
 .statistic__text {
   color: #99aade;
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+}
+
+.reviews__slider-container > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px;
 }
 
 .footer {

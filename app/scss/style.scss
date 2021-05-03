@@ -394,6 +394,10 @@
 			box-shadow: 0px 0px 1px 1px $title;
 			text-shadow: 0 0 1px #fff;
 		}
+
+		&--about {
+			margin-bottom: 0;
+		}
 	}
 
 	&__box {
@@ -938,11 +942,11 @@
 	background-color: #e5eaf7;
 
 	&__slider-container {
-		margin-bottom: 80px;
+		@include adaptive(margin-bottom, 80, 15, 3);
 	}
 
 	&__slider-wrapper {
-		margin-bottom: 40px;
+		@include adaptive(margin-bottom, 40, 30, 3);
 	}
 
 	&__slider-slide {
@@ -1000,13 +1004,18 @@
 		font-family: 'Poppins', sans-serif;
 		font-weight: 500;
 		color: $title;
-		@include adaptive(font-size, 42, 32, 3);
-		margin-bottom: 15px;
+		@include adaptive(font-size, 42, 27, 3);
+		@include adaptive(margin-bottom, 15, 10, 3);
 	}
 
 	&__text {
 		color: #99aade;
+		@include adaptive(line-height, 24, 18, 3);
 	}
+}
+
+.reviews__slider-container>.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 8px;
 }
 //--------------------------- reviews media -----------------------------//
 @media (max-width: 1200px) {
