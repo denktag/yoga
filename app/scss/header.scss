@@ -1,11 +1,11 @@
 .header {
-	background-image: url('../img/header-page-bg.jpg');
+	background-image: url('../img/header-page-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom center;
 
 	&--home {
-		background-image: url('../img/home-header-bg.jpg');
+		background-image: url('../img/home-header-bg.png');
 	}
 
 
@@ -101,7 +101,8 @@
 		color: #99aade;
 		margin-top: 30px;
 
-		&--pricing {
+		&--pricing,
+		&--contact {
 			max-width: 381px;
 			margin-top: 10px;
 			@include adaptive(line-height, 24, 20, 3);

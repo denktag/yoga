@@ -48,6 +48,10 @@ let reviewsSwiper = new Swiper('.reviews__slider-container', {
 	fadeEffect: {
 		crossFade: true,
 	},
+
+	autoplay: {
+		delay: 3000,
+	},
 });
 
 

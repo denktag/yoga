@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title":"contact",
+"keywords":"keywords",
+"Description":"Description",
+"urlSite":"https://site.ru",
+"imagePreload":"https://site.ru/img/image.jpg"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__inner">
+					<div class="header__top">
+						<a class="header__logo logo" href="#">
+							<img class="logo__img" src="img/logo.png" alt="logo" />
+						</a>
+
+						<div class="header__burger">
+							<span class="header__burger-line"></span>
+						</div>
+		
+						<nav class="header__menu">
+							<ul class="header__list">
+								<li class="header__item">
+									<!-- <a class="header__link" href="http://localhost:3000/">Home</a> -->
+									<a class="header__link" href="https://denktag.github.io/yoga/dist/">Home</a>
+								</li>
+		
+								<li class="header__item">
+									<!-- <a class="header__link" href="http://localhost:3000/about.html">About Us</a> -->
+									<a class="header__link" href="https://denktag.github.io/yoga/dist/about">About Us</a>
+								</li>
+		
+								<li class="header__item">
+									<a class="header__link" href="#">Teacher</a>
+								</li>
+		
+								<li class="header__item">
+									<!-- <a class="header__link" href="http://localhost:3000/pricing.html">Pricing</a> -->
+									<a class="header__link" href="https://denktag.github.io/yoga/dist/pricing">Pricing</a>
+								</li>
+		
+								<li class="header__item">
+									<a class="header__link" href="#">Contact</a>
+								</li>
+		
+								<li class="header__item">
+									<a class="header__link" href="#">Login</a>
+								</li>
+							</ul>
+						</nav>
+		
+						<a class="header__btn" href="#"> Start Your Free Trial </a>
+					</div>
+		
+					<div class="_container">
+						<div class="header__bottom">
+							<h2 class="header__title">Contact Us</h2>
+							<p class="header__text header__text--contact">
+								Whether you’re looking for answers, would like to solve a problem, or just want to let us know how we did, you’ll find many ways to contact us right here.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="contact-page">
+      <article class="contact">
+				<div class="header-contact__bg">
+					<img class="header-contact__bg-img" src="img/contact-bg.png" alt="background image">
+				</div>
+
+				<div class="contact__container _container">
+					<div class="contact__inner">
+						<form class="contact__form">
+							<div class="contact__form-item">
+								<input class="contact__inp" type="text" name="name" placeholder="Name">
+							</div>
+
+							<div class="contact__form-item">
+								<input class="contact__inp" type="text" name="email" placeholder="Email">
+							</div>
+
+							<div class="contact__form-item">
+								<input class="contact__inp" type="number" name="phone" placeholder="Phone">
+							</div>
+
+							<div class="contact__form-item">
+								<input class="contact__inp" type="text" name="subject" placeholder="Subject">
+							</div>
+
+							<textarea class="contact__massage" name="massage" placeholder="Massage"></textarea>	
+							
+							<button class="contact__btn" type="submit">send message</button>
+						</form>
+
+						<div class="contact__box">
+							<div class="contact__item">
+								<iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3151.745534468572!2d144.95050796584485!3d-37.819428942141684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spo%20box%2016122%20collins%20street%20west%20victoria%208007%20australia!5e0!3m2!1sru!2sru!4v1620404171093!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+								<h5 class="contact__title">
+									Newyork Studio
+								</h5>
+
+								<address class="contact__address">
+									PO Box 16122 Collins Street West,
+									Victoria 8007 Australia
+								</address>
+
+								<a class="contact__email" href="mailto:Alitstudios@gmai.com">Alitstudios@gmai.com</a>
+
+								<a class="contact__phone" href="tel:+61383766284">+61 3 8376 6284</a>
+							</div>
+
+							<div class="contact__item">
+								<iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3151.745534468572!2d144.95050796584485!3d-37.819428942141684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spo%20box%2016122%20collins%20street%20west%20victoria%208007%20australia!5e0!3m2!1sru!2sru!4v1620404171093!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+								<h5 class="contact__title">
+									Newyork Studio
+								</h5>
+
+								<address class="contact__address">
+									PO Box 16122 Collins Street West,
+									Victoria 8007 Australia
+								</address>
+
+								<a class="contact__email" href="mailto:Alitstudios@gmai.com">Alitstudios@gmai.com</a>
+								<a class="contact__phone" href="tel:+61355718274">+61 3 5571 8274</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+
+		@@include('_footer.html',{})
+	</div>
+
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>
