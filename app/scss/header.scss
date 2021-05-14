@@ -75,12 +75,12 @@
 
 	&__bottom {
 		font-family: 'Poppins', sans-serif;
-		@include adaptive(margin-bottom, 120, 40, 3);
+		@include adaptive(margin-bottom, 120, 65, 3);
 
 		&--home {
 			text-align: right;
 			line-height: 100px;
-			@include adaptive(margin-bottom, 420, 40, 3);
+			@include adaptive(margin-bottom, 420, 65, 3);
 		}	
 	}
 

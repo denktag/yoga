@@ -241,13 +241,13 @@ body {
 
 .header__bottom {
   font-family: 'Poppins', sans-serif;
-  margin-bottom: calc(40px + 80 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(65px + 55 * ((100vw - 320px) / 1600));
 }
 
 .header__bottom--home {
   text-align: right;
   line-height: 100px;
-  margin-bottom: calc(40px + 380 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(65px + 355 * ((100vw - 320px) / 1600));
 }
 
 .header__title {
