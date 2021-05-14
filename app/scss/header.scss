@@ -90,6 +90,11 @@
 		font-weight: 300;
 		color: $title;
 
+		&--class {
+			@include adaptive(font-size, 29, 22, 3);
+			@include adaptive(line-height, 48, 30, 3);
+			font-weight: 400;
+		}
 
 		&--one {
 			@include adaptive(margin-right, 60, 30, 3);
@@ -102,10 +107,15 @@
 		margin-top: 30px;
 
 		&--pricing,
-		&--contact {
+		&--contact,
+		&--class {
 			max-width: 381px;
 			margin-top: 10px;
 			@include adaptive(line-height, 24, 20, 3);
+		}
+
+		&--class {
+			@include adaptive(max-width, 408, 215, 3);
 		}
 	}
 }
@@ -232,8 +242,16 @@
 			padding: 10px 0 0;
 		}
 
+		&__menu {
+			top: 70px;
+		}
+
 		&__btn {
 			padding: 4px 18px;
+		}
+
+		&__bottom {
+			margin-top: 20px;
 		}
 	}
 
