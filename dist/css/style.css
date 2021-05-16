@@ -153,6 +153,10 @@ body {
   line-height: calc(28px + 24 * ((100vw - 320px) / 1600));
 }
 
+._page-active {
+  color: #7492ec;
+}
+
 .header {
   background-image: url("../img/header-page-bg.png");
   background-size: cover;
@@ -214,12 +218,17 @@ body {
 .header__link {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #7492ec;
+  color: #99aade;
   font-size: calc(15px + 1 * ((100vw - 320px) / 1600));
 }
 
 .header__link:hover {
+  color: #7492ec;
   text-shadow: 0px 0px 1px #7492ec;
+}
+
+.header__link._page-active {
+  color: #7492ec;
 }
 
 .header__btn {
@@ -598,7 +607,8 @@ body {
 
 .classes__text--single {
   max-width: 500px;
-  overflow: inherit;
+  max-height: auto;
+  overflow: visible;
 }
 
 .swiper-button-next,

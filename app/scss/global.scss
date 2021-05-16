@@ -8,8 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-
-
 html,
 body {
 	width: 100%;
@@ -51,3 +49,6 @@ body {
 	@include adaptive(line-height, 52, 28, 3);
 }
 
+._page-active {
+	color: $title;
+}

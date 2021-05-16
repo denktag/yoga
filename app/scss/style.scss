@@ -347,7 +347,8 @@
 
 			&--single {
 				max-width: 500px;
-				overflow: inherit;
+				max-height: auto;
+				overflow: visible;
 			}
 		}
 	}
@@ -557,10 +558,6 @@
 	}
 }
 //--------------------------- offer media -----------------------------//
-@media (max-width: 1200px) {
-	
-}
-
 @media (max-width: 992px) {
 	.offer {
 		&__box {
@@ -835,11 +832,9 @@
 }
 //--------------------------- challenge media -----------------------------//
 @media (max-width: 1200px) {
-	
 }
 
 @media (max-width: 992px) {
-
 }
 
 @media (max-width: 768px) {
@@ -916,15 +911,12 @@
 }
 //--------------------------- about media -----------------------------//
 @media (max-width: 1200px) {
-	
 }
 
 @media (max-width: 992px) {
-
 }
 
 @media (max-width: 768px) {
-
 }
 
 @media (max-width: 576px) {
@@ -976,20 +968,16 @@
 	}
 }
 //--------------------------- wisdom media -----------------------------//
-@media (max-width: 1200px) {
-	
+@media (max-width: 1200px) {	
 }
 
 @media (max-width: 992px) {
-
 }
 
 @media (max-width: 768px) {
-
 }
 
 @media (max-width: 576px) {
-	
 }
 //---------------------------- wisdom end -------------------------------//
 
@@ -1055,15 +1043,12 @@
 }
 //----------------------- about-classes media -------------------------//
 @media (max-width: 1200px) {
-	
 }
 
 @media (max-width: 992px) {
-
 }
 
 @media (max-width: 768px) {
-
 }
 
 @media (max-width: 576px) {
@@ -1166,19 +1151,15 @@
 }
 //--------------------------- reviews media -----------------------------//
 @media (max-width: 1200px) {
-	
 }
 
 @media (max-width: 992px) {
-
 }
 
 @media (max-width: 768px) {
-
 }
 
 @media (max-width: 576px) {
-	
 }
 //---------------------------- reviews end -------------------------------//
 
@@ -1253,9 +1234,6 @@
 }
 //--------------------------- pricing media -----------------------------//
 @media (max-width: 1200px) {
-	.pricing {
-		
-	}
 }
 
 @media (max-width: 992px) {
@@ -1277,9 +1255,6 @@
 }
 
 @media (max-width: 768px) {
-	.pricing {
-
-	}
 }
 
 @media (max-width: 576px) {
@@ -1450,9 +1425,6 @@
 }
 //----------------------- contact media -------------------------//
 @media (max-width: 1200px) {
-	.contact {
-
-	}
 }
 
 @media (max-width: 992px) {
@@ -1473,9 +1445,6 @@
 }
 
 @media (max-width: 768px) {
-	.contact {
-
-	}
 }
 
 @media (max-width: 576px) {
@@ -1538,11 +1507,9 @@
 }
 //--------------------------- class media -----------------------------//
 @media (max-width: 1200px) {
-	
 }
 
 @media (max-width: 992px) {
-
 }
 
 @media (max-width: 768px) {
@@ -1623,9 +1590,6 @@
 }
 
 @media (max-width: 768px) {
-	.benefits {
-
-	}
 }
 
 @media (max-width: 576px) {
@@ -1640,91 +1604,8 @@
 		}
 	}	
 }
-//---------------------------- benefits end -------------------------------//
+//---------------------------- benefits end ------------------------------//
 
-
-//--------------------------- start ------------------------------//
-
-//--------------------------- media -----------------------------//
-@media (max-width: 1200px) {
-	
-}
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 576px) {
-	
-}
-//---------------------------- end -------------------------------//
-
-
-//--------------------------- start ------------------------------//
-
-//--------------------------- media -----------------------------//
-@media (max-width: 1200px) {
-	
-}
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 576px) {
-	
-}
-//---------------------------- end -------------------------------//
-
-
-//--------------------------- start ------------------------------//
-
-//--------------------------- media -----------------------------//
-@media (max-width: 1200px) {
-	
-}
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 576px) {
-	
-}
-//---------------------------- end -------------------------------//
-
-
-//--------------------------- start ------------------------------//
-
-//--------------------------- media -----------------------------//
-@media (max-width: 1200px) {
-	
-}
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 576px) {
-	
-}
-//---------------------------- end -------------------------------//
 
 
 @import "footer";

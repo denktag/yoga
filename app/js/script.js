@@ -66,6 +66,12 @@ $(document).ready(function(){
 });
 
 
+//! Добавление/удаление класса
+$('.header__link').on('click', function (){
+	$('.header__link').removeClass('_page-active');
+	$(this).addClass('_page-active');
+});
+
 
 //! burger-menu
 $(document).on("click", ".header__burger", function(e) {
@@ -78,7 +84,7 @@ $(document).on("click", ".footer__burger", function(e) {
 
 
 
-//* Плавный скрол
+//! Плавный скрол
 $(document).on("click", ".instructors__btn", function(e) {
 	e.preventDefault();
 	let id  = $(this).attr('href');
