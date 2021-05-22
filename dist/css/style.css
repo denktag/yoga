@@ -2171,6 +2171,10 @@ body {
     max-height: 100%;
   }
 
+  .info__video-wrap {
+    margin: 0 auto;
+  }
+
   .classes__bg {
     top: -125px;
     right: -120px;
