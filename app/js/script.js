@@ -84,7 +84,6 @@ $(document).on("click", ".footer__burger", function(e) {
 
 
 
-
 //! Скрыть блок навигации, по клику вне блока
 $(document).mouseup(function (e) { // событие клика по веб-документу
 	if ( ! $(".header__burger").is(e.target) && $(".header__burger").has(e.target).length === 0 &&
@@ -96,6 +95,13 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 	}
 });
 
+// скрыть меню при сколле
+$(window).on('scroll', function() {
+	if ($(this).scrollTop() > 340) {
+		$('.header__burger, .header__menu').removeClass('_active');
+	}
+});
+
 $(document).mouseup(function (e) { // событие клика по веб-документу
 	if ( ! $(".footer__burger").is(e.target) && $(".footer__burger").has(e.target).length === 0 &&
 			// если клик был не по нашему блоку
@@ -103,6 +109,13 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 			// и не по его дочерним элементам
 				) {
 		$(".footer__burger, .footer__menu-list").removeClass('_active'); // скрываем его
+		}
+	});
+
+	// скрыть меню при сколле
+	$(window).on('scroll', function() {
+		if ($(this).scrollTop() > 340) {
+			$('.footer__burger, .footer__menu-list').removeClass('_active');
 		}
 	});
 
