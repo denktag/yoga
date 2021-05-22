@@ -56,7 +56,7 @@ let reviewsSwiper = new Swiper('.reviews__slider-container', {
 
 
 
-//! Запуск/остановка видео по нажатию на родителя тега 'video'
+//! Запуск/остановка видео
 $(document).ready(function(){
   $('.info__video-wrap').click(function(){
     let myVideo = $(this).find("video")[0];
@@ -81,6 +81,30 @@ $(document).on("click", ".header__burger", function(e) {
 $(document).on("click", ".footer__burger", function(e) {
 	$('.footer__burger, .footer__menu-list').toggleClass('_active');
 });
+
+
+
+
+//! Скрыть блок навигации, по клику вне блока
+$(document).mouseup(function (e) { // событие клика по веб-документу
+	if ( ! $(".header__burger").is(e.target) && $(".header__burger").has(e.target).length === 0 &&
+		// если клик был не по нашему блоку
+		! $(".header__menu").is(e.target) && $(".header__menu").has(e.target).length === 0
+		// и не по его дочерним элементам
+			) {
+	$(".header__burger, .header__menu").removeClass('_active'); // скрываем его
+	}
+});
+
+$(document).mouseup(function (e) { // событие клика по веб-документу
+	if ( ! $(".footer__burger").is(e.target) && $(".footer__burger").has(e.target).length === 0 &&
+			// если клик был не по нашему блоку
+			! $(".footer__menu-list").is(e.target) && $(".footer__menu-list").has(e.target).length === 0
+			// и не по его дочерним элементам
+				) {
+		$(".footer__burger, .footer__menu-list").removeClass('_active'); // скрываем его
+		}
+	});
 
 
 
